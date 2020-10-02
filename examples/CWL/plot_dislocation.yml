@@ -1,0 +1,7 @@
+script_plot: 
+  class: File
+  path: 01PP_Plot.py
+input_data:
+  class: File
+  path: dislocations.json
+output_plot_name: pileup.png

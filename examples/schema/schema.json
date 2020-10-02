@@ -1,0 +1,68 @@
+{  "@context":[
+    "https://az-ihsan.github.io/ont-2dDDD/json-ld/2dDDD.json-ld",
+    {
+        "2dDDD":"https://az-ihsan.github.io/ont-2dDDD/ont/2dDDD.owl/",
+        "xsd" : "https://www.w3.org/2001/XMLSchema#"
+    }
+]
+    "System description": {
+        "Delta time step": ,
+        "Number of simulation step" : , 
+        "Number of dislocation": , 
+        "Geometry": {
+            "Rectangular":{
+                "Point 1" : [] ,
+                "Point 2" : []
+            }
+        }, 
+        "Loading condition": {
+            "External force": {
+                "unit": "2dDDD:Newton", 
+                "value": 
+            }
+        }, 
+        "Slip system": {
+            "Number of slip plane": , 
+            "Slip plane": [
+                {
+                    "id": , 
+                    "length": , 
+                    "angle": , 
+                    "r0": []
+                }
+            ]
+        } 
+    }, 
+    "Material properties": {
+        "Mobility": {
+            "unit": "", 
+            "value": 
+        }, 
+        "Poissons ratio": {
+            "unit": "", 
+            "value": 
+        }, 
+        "Bulk modulus": 
+        {
+            "unit": "2dDDD:Pascal", 
+            "value": 
+        }
+    },
+    "Dislocations": [
+        {
+            "@id:":"" ,
+            "@type": "xsd:integer"
+            "Slip plane id": , 
+            "Position": [],
+            "Burgers vector " : {
+                "unit": "2dDDD:Meter",
+                "value":
+            }, 
+            "Force":{
+                "unit": "2dDDD:NewtonPerLength",
+                "value": 
+            }
+        },
+    ]
+
+}

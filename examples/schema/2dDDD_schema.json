@@ -1,0 +1,214 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/2DDDD",
+    "definitions": {
+        "2DDDD": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Delta time step": {
+                    "type": "number"
+                },
+                "Number of simulation step": {
+                    "type": "integer"
+                },
+                "Number of dislocation": {
+                    "type": "integer"
+                },
+                "Geometry": {
+                    "$ref": "#/definitions/Geometry"
+                },
+                "Material properties": {
+                    "$ref": "#/definitions/MaterialProperties"
+                },
+                "Loading condition": {
+                    "$ref": "#/definitions/LoadingCondition"
+                },
+                "Slip system": {
+                    "$ref": "#/definitions/SlipSystem"
+                },
+                "Dislocations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Dislocation"
+                    }
+                }
+            },
+            "required": [
+                "Delta time step",
+                "Dislocations",
+                "Geometry",
+                "Loading condition",
+                "Material properties",
+                "Number of dislocation",
+                "Number of simulation step",
+                "Slip system"
+            ],
+            "title": "2DDDD"
+        },
+        "Dislocation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "Slip plane id": {
+                    "type": "integer"
+                },
+                "Position": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "Burgers vector": {
+                    "$ref": "#/definitions/ExternalForce"
+                },
+                "Force": {
+                    "$ref": "#/definitions/ExternalForce"
+                }
+            },
+            "required": [
+                "Burgers vector",
+                "Force",
+                "Position",
+                "Slip plane id",
+                "id"
+            ],
+            "title": "Dislocation"
+        },
+        "ExternalForce": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "unit": {
+                    "$ref": "#/definitions/Unit"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "unit",
+                "value"
+            ],
+            "title": "ExternalForce"
+        },
+        "Geometry": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Point 1": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "Point 2": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "Point 1",
+                "Point 2"
+            ],
+            "title": "Geometry"
+        },
+        "LoadingCondition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "External force": {
+                    "$ref": "#/definitions/ExternalForce"
+                }
+            },
+            "required": [
+                "External force"
+            ],
+            "title": "LoadingCondition"
+        },
+        "MaterialProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Mobility": {
+                    "$ref": "#/definitions/ExternalForce"
+                },
+                "Poissons ratio": {
+                    "$ref": "#/definitions/ExternalForce"
+                },
+                "Bulk modulus": {
+                    "$ref": "#/definitions/ExternalForce"
+                }
+            },
+            "required": [
+                "Bulk modulus",
+                "Mobility",
+                "Poissons ratio"
+            ],
+            "title": "MaterialProperties"
+        },
+        "SlipSystem": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Number of slip plane": {
+                    "type": "integer"
+                },
+                "Slip plane": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SlipPlane"
+                    }
+                }
+            },
+            "required": [
+                "Number of slip plane",
+                "Slip plane"
+            ],
+            "title": "SlipSystem"
+        },
+        "SlipPlane": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "length": {
+                    "type": "integer"
+                },
+                "angle": {
+                    "type": "integer"
+                },
+                "r0": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "angle",
+                "id",
+                "length",
+                "r0"
+            ],
+            "title": "SlipPlane"
+        },
+        "Unit": {
+            "type": "string",
+            "enum": [
+                "meter",
+                "Newton",
+                "Pascal",
+                ""
+            ],
+            "title": "Unit"
+        }
+    }
+}

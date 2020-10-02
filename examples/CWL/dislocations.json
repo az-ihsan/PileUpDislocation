@@ -1,0 +1,179 @@
+{
+    "Delta time step": 1e-15,
+    "Number of simulation step": 250000,
+    "Number of dislocation": 8,
+    "Geometry": {
+        "Point 1": [
+            0,
+            0
+        ],
+        "Point 2": [
+            78,
+            1
+        ]
+    },
+    "Material properties": {
+        "Mobility": {
+            "unit": "",
+            "value": 0.0001
+        },
+        "Poissons ratio": {
+            "unit": "",
+            "value": 0.25
+        },
+        "Bulk modulus": {
+            "unit": "Pascal",
+            "value": 84800000000.0
+        }
+    },
+    "Loading condition": {
+        "External force": {
+            "unit": "Newton",
+            "value": -100000000.0
+        }
+    },
+    "Slip system": {
+        "Number of slip plane": 1,
+        "Slip plane": [
+            {
+                "id": 0,
+                "length": 78,
+                "angle": 0.0,
+                "r0": [
+                    0,
+                    0.0
+                ]
+            }
+        ]
+    },
+    "Dislocations": [
+        {
+            "id": 0,
+            "Slip plane id": 0,
+            "Position": [
+                51.98905878407376,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.03460522479551937
+            }
+        },
+        {
+            "id": 1,
+            "Slip plane id": 0,
+            "Position": [
+                27.266722262475742,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.02541739553636471
+            }
+        },
+        {
+            "id": 2,
+            "Slip plane id": 0,
+            "Position": [
+                38.558559278719585,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.029560880622663
+            }
+        },
+        {
+            "id": 3,
+            "Slip plane id": 0,
+            "Position": [
+                0.9395738752423157,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.0010751300020934026
+            }
+        },
+        {
+            "id": 4,
+            "Slip plane id": 0,
+            "Position": [
+                4.643720165991398,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.005514481336667945
+            }
+        },
+        {
+            "id": 5,
+            "Slip plane id": 0,
+            "Position": [
+                17.957010531789845,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.02033447908597967
+            }
+        },
+        {
+            "id": 6,
+            "Slip plane id": 0,
+            "Position": [
+                10.46969818378684,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.012726231207022022
+            }
+        },
+        {
+            "id": 7,
+            "Slip plane id": 0,
+            "Position": [
+                68.31625508610705,
+                0.0
+            ],
+            "Burgers vector": {
+                "unit": "meter",
+                "value": 2.54e-10
+            },
+            "Force": {
+                "unit": "Newton",
+                "value": 0.04241175471660836
+            }
+        }
+    ]
+}

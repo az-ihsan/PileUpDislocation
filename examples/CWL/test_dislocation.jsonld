@@ -1,0 +1,140 @@
+{
+    "@context": {
+        "@version": 1.1, 
+        "2dDDD": "https://az-ihsan.github.io/ont-2dDD/ont/2dDDD.owl/", 
+        "xsd": "https://www.w3.org/2001/XMLSchema#", 
+        "schema": "http://schema.org/",
+        "SlipPlane":{
+            "@id":"2dDDD:SlipPlane", 
+            "@container":["@graph", "@index"]
+        },
+        "DislocationData" : {
+            "@id":"2dDDD:contains", 
+            "@container": ["@graph", "@index"]
+        },
+        "hasCoordinate": {
+            "@id": "2dDDD:hasCoordinate", 
+            "@container" : "@list"
+        }, 
+        "hasGeometry": {
+            "@id": "2dDDD:hasCoordinate", 
+            "@container" : "@list"
+        }, 
+        "NormalDirection":{
+            "@id": "2dDDD:hasNormalDirection",
+            "@container": "@list"
+        },
+        "LoadingCondition":{
+            "@id":"2dDDD:hasLoadingCondition"
+        },
+        "BurgersVector":{
+            "@id":"2dDDD:hasDirection", 
+            "@type":"2dDDD:BurgersVector"
+        },
+        "Unit":{
+            "@id":"2dDDD:hasUnit"
+        },
+        "Value":{
+            "@id":"2dDDD:hasValue", 
+            "@type":"xsd:float"
+        }, 
+        "VectorValue":{
+            "@id":"2dDDD:hasValue", 
+            "@container" : "@list"
+        }, 
+        "TotalForce":{
+            "@id":"2dDDD:hasProperties", 
+            "@type":"2dDDD:TotalForce"
+        }, 
+        "glidesOn":{
+            "@id":"2dDDD:glidesOn",
+            "@type":"@id"
+        }, 
+        "MaterialProperties":{
+            "@id":"2dDDD:hasMaterialProperty",
+            "@container":"@index"
+        }
+    }, 
+    
+    "@id": "http://example.com/pileup_simulation",
+    "@type":"2dDDD:PileUpSimulation",
+    "SlipPlane":{
+        "slip_plane_1":{
+            "@id":"http://example.com/pileup_simulation/slip_plane_1", 
+            "NormalDirection":[0, 1, 0],
+            "hasCoordinate": [[
+                [0, 0], 
+                [78, 0 ]
+            ]]
+
+        }
+    },
+    "Geometry":{
+        "@id":"http://example.com/pileup_simulation/geometry", 
+        "@type":"2dDDD:Rectangle", 
+        "hasCoordinate": [[
+            [0, 0], 
+            [0, 1], 
+            [78, 1], 
+            [78, 0]
+        ]]
+    },
+    "LoadingCondition":{
+        "@id":"http://example.com/pileup_simulation/loading_condition", 
+        "@type":"2dDDD:ExternalForce", 
+        "Unit":"2dDDD:Newton", 
+        "Value":"-100000000.0"
+    },
+
+    "MaterialProperties":{
+        "Mobility":{
+            "@id":"http://example.com/pileup_simulation/matprop/mobility",
+            "@type":"2dDDD:Mobility",
+            "Unit":"2dDDD:Unitless", 
+            "Value":0.0001
+        }, 
+        "PoissonRatio":{
+            "@id":"http://example.com/pileup_simulation/matprop/poisson_ratio",
+            "@type":"2dDDD:PoissonRatio",
+            "Unit":"2dDDD:Unitless", 
+            "Value":0.25
+        }, 
+        "Bulk modulus": {
+            "@id":"http://example.com/matprop/pileup_simulation/bulk_modulus",
+          	"@type":"2dDDD:BulkModulus",
+            "Unit": "2dDDD:Pascal",
+            "Value": 84800000000.0
+        }
+    },
+    "DislocationData":{
+        "dis1":{
+            "@id": "http://example.com/pileup_simulation/dis1", 
+            "@type": "2dDDD:Dislocation",
+            "glidesOn": "http://example.com/pileup_simulation/slip_plane_1",
+            "hasCoordinate": [1, 2],
+            "BurgersVector":{
+                "Unit": "2dDDD:Meter", 
+                "Value": [-2.54e-10, 0, 0]
+            },
+            "TotalForce":{
+                "Unit": "2dDDD:Newton", 
+                "Value": 0.029560880622663
+            }  
+        }, 
+        "dis2":{
+            "@id": "http://example.com/pileup_simulation/dis2", 
+            "@type": "2dDDD:Dislocation",
+            "glidesOn": "http://example.com/pileup_simulation/slip_plane_1",
+            "hasCoordinate": [0, 1], 
+            "BurgersVector":{
+                "Unit": "2dDDD:Meter", 
+                "Value": [-2.54e-10, 0, 0]
+            },
+            "TotalForce":{
+                "Unit":"2dDDD:Newton", 
+                "Value": 0.02541739553636471
+            }  
+        }
+
+    }
+}
