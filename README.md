@@ -24,7 +24,7 @@ The backbone of DDD simulation is the implementation elastic properties of dislo
 
 The mobility laws serve as constitutive equation in dislocation dynamics simulations, relating the total driving force per unit length acting on a dislocation line to its velocity. Mobility laws must be constructed within a specific material system since it is strongly material dependent. The viscous drag forces experienced by dislocation in crystalline solid, for instance the force induced by phonon dispersion, are often proportional to the dislocation velocity. Hence, the linear model can be written as
 
-![velocity.](https://github.com/az-ihsan/PileUpDislocation/tree/main/docs/imgs/vel.png)*Velocity of dislocation according to overdamped motion.*
+![velocity.](docs/imgs/vel.png)*Velocity of dislocation according to overdamped motion.*
 
 
 ## Simulation Model 
